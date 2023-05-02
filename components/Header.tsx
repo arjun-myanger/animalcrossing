@@ -12,12 +12,12 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className="bg-gradient-to-r from-green-400 to-blue-500 text-white shadow-md">
+    <header className="bg-white shadow-md">
       <div className="container mx-auto py-4">
         <div className="flex justify-between items-center">
           <div className="text-3xl font-semibold">
             <Link href="/">
-              <span className="cursor-pointer hover:text-ac-yellow transition-colors duration-300">
+              <span className="cursor-pointer text-darker-green hover:text-darker-blue transition-colors duration-300">
                 Animal Crossing
               </span>
             </Link>
@@ -25,9 +25,8 @@ const Header: React.FC = () => {
           <nav className="hidden md:flex space-x-6">
             {games.map((game, index) => (
               <Link key={index} href={game.path}>
-                <span className="relative text-lg font-medium cursor-pointer group">
+                <span className="text-lg font-medium cursor-pointer text-darker-green hover:text-darker-blue transition-colors duration-300">
                   {game.title}
-                  <span className="absolute h-0.5 left-0 bottom-0 bg-ac-yellow w-full transition-all duration-300 ease-in-out transform scale-x-0 group-hover:scale-x-100"></span>
                 </span>
               </Link>
             ))}
@@ -35,11 +34,11 @@ const Header: React.FC = () => {
         </div>
       </div>
       <style jsx>{`
-        header {
-          background-image: linear-gradient(135deg, #9dffb0 0%, #81f1f7 100%);
+        .text-darker-green {
+          color: #72b381;
         }
-        .hover:text-ac-yellow:hover {
-          color: #fff563;
+        .hover:text-darker-blue:hover {
+          color: #51a5c0;
         }
       `}</style>
     </header>
