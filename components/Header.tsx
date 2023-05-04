@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import styles from "./Header.module.css"; // Import the CSS module
+import Image from "next/image"; // Add this import
 
 const Header: React.FC = () => {
   const games = [
@@ -19,9 +19,12 @@ const Header: React.FC = () => {
     <header className="bg-white shadow-md">
       <div className="container mx-auto py-4 flex justify-between items-center">
         <Link href="/">
-          <span className="text-3xl font-semibold cursor-pointer text-darker-green hover:text-darker-blue transition-colors duration-300 link-underline-animation">
-            Animal Crossing
-          </span>
+          <div className="flex items-center cursor-pointer">
+            <Image src="/leaf.svg.png" alt="Leaf Logo" width={40} height={40} />
+            <span className="ml-2 text-3xl font-semibold text-darker-green hover:text-darker-blue transition-colors duration-300 link-underline-animation">
+              Animal Crossing
+            </span>
+          </div>
         </Link>
         <nav className="hidden md:flex space-x-6">
           {games.map((game, index) => (
