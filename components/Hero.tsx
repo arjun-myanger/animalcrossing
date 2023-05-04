@@ -24,28 +24,23 @@ const Hero: React.FC = () => {
             games.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-64">
-          {games.map((game, index) => (
+        <div className="flex flex-wrap justify-center items-center flex-grow mt-64">
+          {games.slice(0, 3).map((game, index) => (
             <Link key={index} href={game.path}>
-              <div className="relative bg-darker-green rounded-lg overflow-hidden shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer">
-                <div
-                  className="absolute inset-0 bg-cover bg-center opacity-50"
-                  style={{
-                    backgroundImage: `url(/path/to/your/image${index + 1}.jpg)`,
-                  }}
-                ></div>
-                <div className="bg-gradient-to-b from-transparent to-darker-green opacity-75 absolute inset-0"></div>
-                <div className="px-8 py-6 relative z-10">
-                  <h3 className="text-2xl font-semibold text-white mb-4">
-                    {game.title}
-                  </h3>
-                  <p className="text-white">
-                    Explore guides, news, and more about {game.title}.
-                  </p>
-                </div>
+              <div className="bg-darker-green px-12 py-8 text-white text-center font-semibold text-2xl rounded-lg cursor-pointer transition-all duration-300 m-4 shadow-lg transform hover:scale-105 hover:shadow-xl">
+                {game.title}
               </div>
             </Link>
           ))}
+          <div className="w-full flex justify-center">
+            {games.slice(3).map((game, index) => (
+              <Link key={index + 3} href={game.path}>
+                <div className="bg-darker-green px-12 py-8 text-white text-center font-semibold text-2xl rounded-lg cursor-pointer transition-all duration-300 m-4 shadow-lg transform hover:scale-105 hover:shadow-xl">
+                  {game.title}
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
       <style jsx>{`
