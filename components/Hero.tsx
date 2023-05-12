@@ -1,6 +1,7 @@
 // components/Hero.tsx
 import React from "react";
 import Link from "next/link";
+import EventCalendar from "./EventCalendar";
 
 const Hero: React.FC = () => {
   const games = [
@@ -54,6 +55,9 @@ const Hero: React.FC = () => {
           background-color: #72b381;
         }
       `}</style>
+      <div className="mt-16">
+        <EventCalendar />
+      </div>
     </section>
   );
 };
