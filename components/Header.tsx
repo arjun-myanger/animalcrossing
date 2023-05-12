@@ -2,7 +2,9 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Image from "next/image"; // Add this import
+import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Header: React.FC = () => {
   const games = [
@@ -39,18 +41,10 @@ const Header: React.FC = () => {
           className="md:hidden focus:outline-none"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
+          <FontAwesomeIcon
+            icon={faBars}
             className="w-8 h-8 text-darker-green"
-          >
-            <path
-              fillRule="evenodd"
-              d="M2 5a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1zm1 5a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-1a1 1 0 1 0-2 0v1H3v-1a1 1 0 0 0-1-1z"
-              clipRule="evenodd"
-            />
-          </svg>
+          />
         </button>
       </div>
       {mobileMenuOpen && (
