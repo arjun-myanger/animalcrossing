@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
           <h1 className="text-4xl md:text-5xl font-semibold text-darker-green mb-6">
             Welcome to Animal Crossing Central
           </h1>
-          <p className="text-xl text-darker-gray">
+          <p className="text-xl text-darker-green">
             Your one-stop hub for all things Animal Crossing. Discover guides,
             news, and community discussions about your favorite Animal Crossing
             games.
