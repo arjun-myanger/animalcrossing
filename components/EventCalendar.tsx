@@ -124,7 +124,7 @@ const EventCalendar: React.FC = () => {
             key={index}
             className={`${
               !isSameMonth(day, currentDate) ? "text-gray-400" : "text-black"
-            } ${isToday(day) ? "bg-green-200" : ""} p-2 rounded-lg`}
+            } ${isToday(day) ? "bg-green-200" : ""} p-2 rounded-lg text-center`}
           >
             <div className="font-bold">{format(day, "d")}</div>
             {inGameEvents
