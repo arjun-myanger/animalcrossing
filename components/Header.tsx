@@ -7,7 +7,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Header: React.FC = () => {
   const games = [
-    { title: "Animal Crossing GameCube", path: "/animal-crossing" },
+    { title: "Animal Crossing GameCube", path: "/acgc" },
     { title: "Wild World", path: "/wild-world" },
     { title: "City Folk", path: "/city-folk" },
     { title: "New Leaf", path: "/new-leaf" },
@@ -17,7 +17,7 @@ const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-black bg-opacity-50 shadow-md">
+    <header className="bg-black shadow-md">
       <div className="container mx-auto py-4 flex justify-between items-center">
         <Link href="/">
           <div className="flex items-center cursor-pointer">

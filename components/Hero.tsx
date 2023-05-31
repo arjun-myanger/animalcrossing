@@ -6,9 +6,7 @@ const Hero: React.FC = () => {
     <section
       className="py-16 px-4 sm:px-8 lg:px-16 min-h-screen"
       style={{
-        backgroundImage: "url(/leaves.png)",
-        backgroundSize: "200px 200px",
-        backgroundRepeat: "repeat",
+        backgroundColor: "black",
       }}
     >
       <div className="container mx-auto max-w-screen-lg flex flex-col h-full">
